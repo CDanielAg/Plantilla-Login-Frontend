@@ -1,0 +1,5 @@
+import { Component,Input,ViewEncapsulation } from '@angular/core';import { RouterLink } from '@angular/router';
+@Component({selector:'app-auth-shell',imports:[RouterLink],encapsulation:ViewEncapsulation.None,template:`
+<main class="auth-shell"><aside class="story" aria-hidden="true"><a class="brand" routerLink="/login"><span class="brand-mark">P</span><span>Plantilla</span></a><div class="story-copy"><h2>Tu trabajo,<br>en un solo lugar</h2><p>Organiza, colabora y da seguimiento a lo que realmente importa.</p></div><div class="orbits"><i></i><i></i><i></i></div></aside>
+<section class="form-zone"><a class="brand brand-mobile" routerLink="/login"><span class="brand-mark">P</span><span>Plantilla</span></a><article class="auth-card"><header><h1>{{title}}</h1><p>{{subtitle}}</p></header><ng-content /></article><footer>© 2026 Plantilla · Privacidad · Términos</footer></section></main>`,styleUrl:'./auth-shell.scss'})
+export class AuthShell { @Input({required:true}) title='';@Input({required:true}) subtitle=''; }
